@@ -1,0 +1,13 @@
+%p#notice= notice
+
+
+%p
+  %b name:
+  = @role.name
+%p
+  %b class:
+  = @role.resource_type
+
+= link_to 'Edit', edit_role_path(@role)
+\|
+= link_to 'Back', roles_path

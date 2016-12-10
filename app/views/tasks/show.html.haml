@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @task.title
+%p
+  %b Content:
+  = @task.content
+
+-if can? :update, @task
+  = link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path
